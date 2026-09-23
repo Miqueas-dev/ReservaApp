@@ -5,8 +5,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
@@ -35,28 +36,28 @@ fun HospedajesScreen(modifier: Modifier = Modifier) {
             "McWay Falls",
             "California, USA",
             "Cascada ubicada en la costa de Big Sur.",
-            R.drawable.ic_app
+            R.drawable.hotel_lima
         ),
         Hospedaje(
             "No disponible",
             "Muralla China",
             "China",
             "Antigua fortificación de China.",
-            R.drawable.ic_app
+            R.drawable.hotel_lima_2
         ),
         Hospedaje(
             "Disponible",
             "Torre Eiffel",
             "París, Francia",
             "Monumento emblemático de París.",
-            R.drawable.ic_app
+            R.drawable.hotel_lima_3
         ),
         Hospedaje(
             "Disponible",
             "Machu Picchu",
             "Cusco, Perú",
             "Ciudadela inca ubicada en los Andes.",
-            R.drawable.ic_app
+            R.drawable.hotel_lima_4
         )
     )
 
@@ -87,7 +88,8 @@ fun HospedajesScreen(modifier: Modifier = Modifier) {
                     Image(
                         painter = painterResource(hospedaje.imagen),
                         contentDescription = hospedaje.nombre,
-                        modifier = Modifier.size(80.dp)
+                        modifier = Modifier.size(100.dp),
+                        contentScale = ContentScale.Crop
                     )
                 }
 
